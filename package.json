@@ -1,0 +1,21 @@
+{
+  "name": "bermusikbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Oh_Yoon_hee",
+    "url": "https://t.me/Oh_Yoon_Hee"
+  },
+  "description": "Bot mencari lagu menggunakan public-restapi.",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@grammyjs/runner": "^1.0.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "got": "^11.8.2",
+    "grammy": "^1.2.0"
+  }
+}
