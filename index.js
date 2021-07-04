@@ -1,18 +1,11 @@
 const express = require('express')
 const app = express()
 const {bot} = require('./bot')
-
+const {webhookCallback} = require('grammy')
 app.use(express.json())
-app.post(`/bot/${bot.token}`, async (req, res)=>{
-    var body = JSON.parse(req.body)
-    bot.handleUpdate(body)
-    return res.json({ok : true})
-})
+app.use(webhookCallback(bot))
 
 var {PORT=3000} = process.env
 app.listen(PORT, ()=>{
     console.log("BOT Running on webhook mode.")
 })
-
-
-//bot.api.setWebhook(url_deploy+/bot/bot.token)
